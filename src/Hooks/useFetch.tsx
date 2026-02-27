@@ -23,7 +23,6 @@ function useFetch<T>(url: RequestInfo | URL, options?: RequestInit) {
         if (!response.ok) throw new Error(`Error: ${response.status}`);
         const json = (await response.json()) as T;
         if (!signal.aborted) setData(json);
-        console.log(json);
       } catch (erro) {
         if (!signal.aborted && erro instanceof Error) setError(erro.message);
       } finally {
