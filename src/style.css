@@ -76,6 +76,7 @@ ul {
   display: grid;
   padding: var(--gap);
   gap: var(--gap);
+  grid-template-columns: 240px auto;
 }
 
 /* Resumo */
@@ -108,4 +109,59 @@ ul {
 .venda a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Sidenav */
+
+.sidenav li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
+}
+
+.sidenav li span {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--gap);
+}
+
+.sidenav li a {
+  flex: 1;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--color-1);
+  pad: var(--gap-s) 0;
+}
+
+.sidenav li:hover span {
+  background: var(--color-3);
+}
+
+/* DateRange */
+
+.date-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+/* Loading */
+
+.loading {
+  border: var(--gap-s) solid var(--color-2);
+  width: var(--gap);
+  height: var(--gap);
+  border-radius: 50%;
+  border-right-color: var(--color-4);
+  animation: "spin" 1s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
