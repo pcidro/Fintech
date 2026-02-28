@@ -166,3 +166,50 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+/* Small screen */
+
+@media (max-width: 1000px) {
+  .resumo {
+    flex-direction: column;
+  }
+
+  .date-range {
+    grid-template-columns: 1fr;
+  }
+
+  .date-range *:last-child {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    --gap-s: 0.5rem;
+    --gap: 0.75rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .sidenav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sidenav li a {
+    font-size: 0.875rem;
+  }
+  .venda {
+    grid-template-columns: 1fr;
+  }
+
+  .venda div:last-child {
+    justify-self: start;
+  }
+}
